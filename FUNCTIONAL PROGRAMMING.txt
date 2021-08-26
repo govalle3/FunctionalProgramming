@@ -1,0 +1,38 @@
+FUNCTIONAL PROGRAMMING
+
+*FILTER: Es usado para filtrar una lista.
+
+java.util.function
+interface
+
+*Predicate<T> = Es un predicado que representa un argumento (funcion de valor booleano)
+En el ejemplo el parametro que recibe filter() es un predicado. Para el ejemplo tenemos "person -> FEMALE.equals(person.gender)"
+
+
+* Function<T, R> Funcion que puede representar un argumento de entrada con uno de salida
+	T es el tipo de variable de entrada y R es el tipo de variable de salida.
+	
+para llamar la function debemos volverla estatica, adicional a eso debemos añdir .apply despues de invocar el metodo 
+para tomar los argumento actuales.
+
+porque deberia usar la function de programacion funcional, todo será clarificado
+
+.andThen
+
+Digamos que se quieren multiples funciones juntas para lograr una salida deseada.
+
+BiFunction: es lo mismo que una Function pero en vez de tomar una entrada toma 2 entradas y produce una salida.
+Bi = "dos cosas"
+
+BiFunction<Integer, Integer, Integer>, para este ejemplo se usan 2 entrada como entera y una salida en entero.
+Depende del negocio se usarán distintos tipos de datos.
+
+* Consumer, representa una operacion que acepta una entrada simple y retorna NADA
+Es como una función VOID
+
+
+
+
+
+
+
