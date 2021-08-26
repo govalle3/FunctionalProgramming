@@ -36,7 +36,6 @@ public class Main {
                 // Mismo procedimiento anterior pero extrayendo una variable de tipo lista e imprimiendo
         Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
         // Acepta una persona y devuelve un booleano basado en que cualquier persona sea de tipo FEMENINO
-
         List<Person> females2 = people.stream()
                 .filter(personPredicate)
                 .collect(Collectors.toList());
