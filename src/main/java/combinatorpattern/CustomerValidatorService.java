@@ -20,4 +20,9 @@ public class CustomerValidatorService {
                 isPhoneNumberValid(customer.getPhoneNumber()) &&
                 isAdult(customer.getDob());
     }
+
+    public boolean isValidPhoneAndEmail(Customer customer) {// Es el metodo actual que le proveemos a los clientes por eso se deja publico
+        return isEmailValid(customer.getEmail()) &&
+                isPhoneNumberValid(customer.getPhoneNumber());
+    }
 }
