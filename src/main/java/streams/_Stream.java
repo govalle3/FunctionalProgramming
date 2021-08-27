@@ -57,11 +57,11 @@ public class _Stream {
                 person -> FEMALE.equals(person.gender);
 
         boolean containOnlyFemale = people.stream()
-                .allMatch(personPredicate);
+                .anyMatch(personPredicate);
 
         System.out.println(containOnlyFemale);
 
-        
+
     }
 
     static class Person {
