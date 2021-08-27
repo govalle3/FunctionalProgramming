@@ -7,7 +7,8 @@ import java.util.function.Function;
 import static combinatorpattern.CustomerRegistrationValidator.*;
 import static combinatorpattern.CustomerRegistrationValidator.ValidationResult.SUCCESS;
 
-public interface CustomerRegistrationValidator extends Function<Customer, ValidationResult> {
+public interface CustomerRegistrationValidator
+        extends Function<Customer, ValidationResult> {
 
     static CustomerRegistrationValidator isEmailValid(){
         return customer -> customer.getEmail().contains("@") ?

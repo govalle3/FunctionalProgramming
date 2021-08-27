@@ -15,13 +15,13 @@ public class CustomerValidatorService {
         return Period.between(dob, LocalDate.now()).getYears() > 16;
     }
 
-    public boolean isValid(Customer customer) {// Es el metodo actual que le proveemos a los clientes por eso se deja publico
+    public boolean isValid(Customer customer) {// Es el método actual que le proveemos a los clientes por eso se deja publico
         return isEmailValid(customer.getEmail()) &&
                 isPhoneNumberValid(customer.getPhoneNumber()) &&
                 isAdult(customer.getDob());
     }
 
-    public boolean isValidPhoneAndEmail(Customer customer) {// Es el metodo actual que le proveemos a los clientes por eso se deja publico
+    public boolean isValidPhoneAndEmail(Customer customer) {// Es el método actual que le proveemos a los clientes por eso se deja publico
         return isEmailValid(customer.getEmail()) &&
                 isPhoneNumberValid(customer.getPhoneNumber());
     }
