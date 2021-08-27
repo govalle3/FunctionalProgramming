@@ -5,9 +5,6 @@ FUNCTIONAL PROGRAMMING
 java.util.function
 interface
 
-*Predicate<T> = Es un predicado que representa un argumento (funcion de valor booleano)
-En el ejemplo el parametro que recibe filter() es un predicado. Para el ejemplo tenemos "person -> FEMALE.equals(person.gender)"
-
 
 * Function<T, R> Funcion que puede representar un argumento de entrada con uno de salida
 	T es el tipo de variable de entrada y R es el tipo de variable de salida.
@@ -29,6 +26,18 @@ Depende del negocio se usarán distintos tipos de datos.
 
 * Consumer, representa una operacion que acepta una entrada simple y retorna NADA
 Es como una función VOID
+
+* BI CONSUMER, representa una operación que acepta dos entradas simples y retorna NADA
+
+*Predicate<T> = Es un predicado que representa un argumento (funcion de valor booleano)
+En el ejemplo el parametro que recibe filter() es un predicado. Para el ejemplo tenemos "person -> FEMALE.equals(person.gender)"
+Se pueden tener varios predicados que pueden ser combinados con otros predicados de las misma forma usando andThen.
+        System.out.println(
+                "Is phone number valid an contains number 3 = " +
+                isPhoneNumberValidPredicate.and(containsNumber3).test("074080770000")
+        );
+		
+
 
 
 
