@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer(
                 "Alice",
-                "alicegmail.com",
+                "alice@gmail.com",
                 "+0987879878",
                 LocalDate.of(2000,1,1)
         );
@@ -17,17 +17,11 @@ public class Main {
         // if valid we can store customer in db
 
         // USING COMBINATOR PATTERN
-        ValidationResult result = isEmailValid()
+        CustomerRegistrationValidator result = isEmailValid()
                 .and(isPhoneNumberValid())
-                .and(isAdult())
-                .apply(customer);
+                .and(isAdult()); // Nada de esto correrá hasta que no le demos apply
 
-        System.out.println(result);
-
-        if(result != SUCCESS){
-            throw new IllegalStateException(result.name());
-        }
-
+        result.apply(customer);
 
     }
 }
