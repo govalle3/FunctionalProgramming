@@ -35,9 +35,44 @@ Se pueden tener varios predicados que pueden ser combinados con otros predicados
         System.out.println(
                 "Is phone number valid an contains number 3 = " +
                 isPhoneNumberValidPredicate.and(containsNumber3).test("074080770000")
+				
         );
+	Para usarlos nombreMetodo.test
 		
+Supplier, Representar a un proveedor de resultados,  basicamente algunas veces tendremos metodos como obtener la url
+de conexion a una BD, esto simplemente es un valor en string.
+Para obtener el resulta hacer nombreMetodo.get()
 
+STREAMS
+	nos toma a un modo de abstracción
+	
+	stream.map realiza transformaciones
+	
+OPTIONALS
+Esta funcion permite realizar funciones de si continene algo devuelva otra cosa.
+.orElseThrow, es un proveedor que provee un valor definido
+
+
+Combinator design pattern,
+creamos un ejemplo de customer donde debemos realizar una serie de validacion de la informacion que un usuario
+ingresa al sistema
+No sabemos exactamente que sucede con nuestra validacion, asi que el combinator pattern es un patron que permite 
+cambiar funciones juntas asi que basicamente un combinator es una funcion que podria tomar funciones como argumentos
+y retorna nuevas funciones
+
+CALL BACK LIKE JS
+
+Pure functional programming has a set of rules to follow
+
+- no state, no debe depende en un estado global.
+- no side effects, no deberia tener efectos secundarios
+solo debe exsitir dentro de la funcion
+- higer order functions, se considera funciones de mayor rango se 
+considera como 
+* la funcion toma uno o mas funciones como parametros.
+* la funcion retorna otra funcion como resultado.
+
+	
 
 
 
